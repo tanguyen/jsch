@@ -5,10 +5,6 @@ See original [README](README)
 [![GitHub release](https://img.shields.io/github/v/tag/mwiede/jsch.svg)](https://github.com/mwiede/jsch/releases/latest)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.mwiede/jsch/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.mwiede/jsch)
 ![Java CI with Maven](https://github.com/mwiede/jsch/workflows/Java%20CI%20with%20Maven/badge.svg)
-[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=mwiede_jsch&metric=coverage)](https://sonarcloud.io/summary/overall?id=mwiede_jsch)
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=mwiede_jsch&metric=bugs)](https://sonarcloud.io/summary/overall?id=mwiede_jsch)
-[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=mwiede_jsch&metric=sqale_rating)](https://sonarcloud.io/summary/overall?id=mwiede_jsch)
-[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=mwiede_jsch&metric=reliability_rating)](https://sonarcloud.io/summary/overall?id=mwiede_jsch)
 
 ## Why should you use this library?
 
@@ -37,7 +33,7 @@ with
 <dependency>
   <groupId>com.github.mwiede</groupId>
   <artifactId>jsch</artifactId>
-  <version>0.2.4</version>
+  <version>0.2.8</version>
 </dependency>
 ```
 
@@ -47,7 +43,7 @@ When you have an artifact `foo:bar`, which contains `com.jcraft:jsch` as a trans
 <dependency>
   <groupId>com.github.mwiede</groupId>
   <artifactId>jsch</artifactId>
-  <version>0.2.4</version>
+  <version>0.2.8</version>
 </dependency>
 <dependency>
   <groupId>foo</groupId>
@@ -60,6 +56,9 @@ When you have an artifact `foo:bar`, which contains `com.jcraft:jsch` as a trans
       </exclusions> 
 </dependency>
 ```
+
+*Addition*: You can further exclude any of `com.jcraft:jsch.agentproxy.jsch`, `com.jcraft:jsch.agentproxy.core` or `com.jcraft:jsch.agentproxy.pageant`, because these modules where integrated in this fork (see release notes of [0.1.66](https://github.com/mwiede/jsch/releases/tag/jsch-0.1.66)).
+
 ## FAQ
 ### Are ssh-ed25519, ssh-ed448, curve25519-sha256, curve448-sha512 & chacha20-poly1305@<!-- -->openssh.com supported?
   * This library is a Multi-Release-jar, which means that you can only use certain features when a more recent Java version is used.
